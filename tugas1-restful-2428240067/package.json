@@ -1,0 +1,13 @@
+{
+  "name": "tugas1-restful-2428240067",
+  "version": "1.0.0",
+  "description": "RESTful API paket kiriman ekspedisi",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test-api.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
