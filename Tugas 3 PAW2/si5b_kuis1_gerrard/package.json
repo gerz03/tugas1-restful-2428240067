@@ -1,0 +1,33 @@
+{
+  "name": "si5c_kuis1_gerrard",
+  "version": "1.0.0",
+  "description": "RESTful API ekspedisi paket kiriman dengan Express, MongoDB (Mongoose), embedding, referencing, filtering, pagination, sorting, dan projection",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed": "node scripts/seed.js",
+    "test:api": "node tests/run-tests.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "shipments",
+    "ekspedisi"
+  ],
+  "author": "Gerrard",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}

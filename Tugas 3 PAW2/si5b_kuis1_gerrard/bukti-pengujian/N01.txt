@@ -1,0 +1,19 @@
+[N01] POST tanpa API key
+
+$ curl -X POST "http://localhost:3000/shipments"
+    -H "Content-Type: application/json"
+    -d '{
+  "nomorResi": "EXP-ERROR-01",
+  "pengirim": "Gerrard",
+  "penerima": "Andi",
+  "beratKg": 2.5,
+  "statusPengiriman": "diproses"
+}'
+
+HTTP 401  (harapan 401)  =>  LULUS
+
+{
+  "status": "error",
+  "message": "API key tidak valid atau tidak ada",
+  "data": null
+}

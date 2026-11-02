@@ -1,0 +1,16 @@
+[N13] Tracking dengan status tidak valid
+
+$ curl -X POST "http://localhost:3000/shipments/6ae2df44332efa918487ae40/tracking"
+    -H "x-api-key: secret123"
+    -H "Content-Type: application/json"
+    -d '{
+  "status": "hilang"
+}'
+
+HTTP 400  (harapan 400)  =>  LULUS
+
+{
+  "status": "error",
+  "message": "status harus salah satu dari diproses, dikirim, atau diterima",
+  "data": null
+}

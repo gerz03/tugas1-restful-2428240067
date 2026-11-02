@@ -1,0 +1,14 @@
+[N03] POST JSON rusak
+
+$ curl -X POST "http://localhost:3000/shipments"
+    -H "x-api-key: secret123"
+    -H "Content-Type: application/json"
+    -d '{ "nomorResi": "EXP-ERROR-03", "pengirim": "Gerrard", }'
+
+HTTP 400  (harapan 400)  =>  LULUS
+
+{
+  "status": "error",
+  "message": "JSON tidak valid",
+  "data": null
+}

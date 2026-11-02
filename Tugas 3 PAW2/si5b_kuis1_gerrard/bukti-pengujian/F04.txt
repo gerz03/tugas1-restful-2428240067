@@ -1,0 +1,32 @@
+[F04] Filter: berdasarkan kurir (referencing)
+
+$ curl -X GET "http://localhost:3000/shipments?kurir=6ae2df44332efa918487ae3f&fields=nomorResi,pengirim,kurir"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data shipment berhasil ditampilkan",
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "totalData": 2,
+    "totalPages": 1,
+    "hasNextPage": false,
+    "hasPrevPage": false
+  },
+  "data": [
+    {
+      "_id": "6ae2df44332efa918487ae57",
+      "nomorResi": "EXP-GERRARD-009",
+      "pengirim": "Hadi",
+      "kurir": "6ae2df44332efa918487ae3f"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae49",
+      "nomorResi": "EXP-GERRARD-004",
+      "pengirim": "Gerrard",
+      "kurir": "6ae2df44332efa918487ae3f"
+    }
+  ]
+}

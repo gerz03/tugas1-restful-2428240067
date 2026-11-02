@@ -1,0 +1,40 @@
+[C01] Kurir: filter aktif=true + sorting nama + pagination
+
+$ curl -X GET "http://localhost:3000/couriers?aktif=true&sort=-nama&page=1&limit=5"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data kurir berhasil ditampilkan",
+  "meta": {
+    "page": 1,
+    "limit": 5,
+    "totalData": 2,
+    "totalPages": 1,
+    "hasNextPage": false,
+    "hasPrevPage": false
+  },
+  "data": [
+    {
+      "_id": "6ae2df44332efa918487ae3e",
+      "nama": "Siti Aminah",
+      "nomorTelepon": "081234567002",
+      "kendaraan": "mobil",
+      "wilayah": "Jakarta",
+      "aktif": true,
+      "createdAt": "2026-10-29T05:53:08.921Z",
+      "updatedAt": "2026-10-29T05:53:08.921Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae3d",
+      "nama": "Rudi Hartono",
+      "nomorTelepon": "081234567001",
+      "kendaraan": "motor",
+      "wilayah": "Palembang",
+      "aktif": true,
+      "createdAt": "2026-10-29T05:53:08.916Z",
+      "updatedAt": "2026-10-29T05:53:08.916Z"
+    }
+  ]
+}

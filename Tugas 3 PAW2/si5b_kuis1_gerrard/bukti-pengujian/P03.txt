@@ -1,0 +1,35 @@
+[P03] Pagination: halaman terakhir (page=3, limit=5)
+
+$ curl -X GET "http://localhost:3000/shipments?page=3&limit=5&sort=nomorResi&fields=nomorResi,pengirim"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data shipment berhasil ditampilkan",
+  "meta": {
+    "page": 3,
+    "limit": 5,
+    "totalData": 13,
+    "totalPages": 3,
+    "hasNextPage": false,
+    "hasPrevPage": true
+  },
+  "data": [
+    {
+      "_id": "6ae2df44332efa918487ae5e",
+      "nomorResi": "EXP-GERRARD-011",
+      "pengirim": "Lina"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae60",
+      "nomorResi": "EXP-GERRARD-012",
+      "pengirim": "Maya"
+    },
+    {
+      "_id": "6ae2e130815c6987812ad871",
+      "nomorResi": "EXP-GERRARD-2428240067",
+      "pengirim": "Gerrard"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+[S01] Sorting: beratKg terbesar ke terkecil
+
+$ curl -X GET "http://localhost:3000/shipments?sort=-beratKg&limit=5&fields=nomorResi,beratKg"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data shipment berhasil ditampilkan",
+  "meta": {
+    "page": 1,
+    "limit": 5,
+    "totalData": 13,
+    "totalPages": 3,
+    "hasNextPage": true,
+    "hasPrevPage": false
+  },
+  "data": [
+    {
+      "_id": "6ae2df44332efa918487ae4e",
+      "nomorResi": "EXP-GERRARD-006",
+      "beratKg": 12.5
+    },
+    {
+      "_id": "6ae2df44332efa918487ae57",
+      "nomorResi": "EXP-GERRARD-009",
+      "beratKg": 9.9
+    },
+    {
+      "_id": "6ae2df44332efa918487ae49",
+      "nomorResi": "EXP-GERRARD-004",
+      "beratKg": 7.8
+    },
+    {
+      "_id": "6ae2df44332efa918487ae5e",
+      "nomorResi": "EXP-GERRARD-011",
+      "beratKg": 6.4
+    },
+    {
+      "_id": "6ae2df44332efa918487ae55",
+      "nomorResi": "EXP-GERRARD-008",
+      "beratKg": 5.1
+    }
+  ]
+}

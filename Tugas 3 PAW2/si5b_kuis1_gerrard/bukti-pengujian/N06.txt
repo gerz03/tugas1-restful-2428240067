@@ -1,0 +1,11 @@
+[N06] Filter statusPengiriman tidak valid
+
+$ curl -X GET "http://localhost:3000/shipments?statusPengiriman=hilang"
+
+HTTP 400  (harapan 400)  =>  LULUS
+
+{
+  "status": "error",
+  "message": "statusPengiriman tidak valid",
+  "data": null
+}

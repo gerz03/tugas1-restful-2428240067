@@ -1,0 +1,8 @@
+[C04] Kurir: menghapus kurir yang tidak dipakai
+
+$ curl -X DELETE "http://localhost:3000/couriers/6ae2e130815c6987812ad876"
+    -H "x-api-key: secret123"
+
+HTTP 204  (harapan 204)  =>  LULUS
+
+(tanpa body)

@@ -1,0 +1,350 @@
+[T01] Menampilkan semua shipment (default pagination)
+
+$ curl -X GET "http://localhost:3000/shipments"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data shipment berhasil ditampilkan",
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "totalData": 12,
+    "totalPages": 2,
+    "hasNextPage": true,
+    "hasPrevPage": false
+  },
+  "data": [
+    {
+      "_id": "6ae2df44332efa918487ae57",
+      "nomorResi": "EXP-GERRARD-009",
+      "pengirim": "Hadi",
+      "penerima": "Indra",
+      "beratKg": 9.9,
+      "statusPengiriman": "diterima",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 9",
+        "kota": "Medan",
+        "provinsi": "Sumatera Utara",
+        "kodePos": "30108"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae58",
+          "waktu": "2026-10-29T05:53:08.948Z"
+        },
+        {
+          "status": "dikirim",
+          "lokasi": "Hub transit",
+          "keterangan": "Paket dalam perjalanan",
+          "_id": "6ae2df44332efa918487ae59",
+          "waktu": "2026-10-29T05:53:08.948Z"
+        },
+        {
+          "status": "diterima",
+          "lokasi": "Medan",
+          "keterangan": "Paket diterima penerima",
+          "_id": "6ae2df44332efa918487ae5a",
+          "waktu": "2026-10-29T05:53:08.949Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3f",
+      "createdAt": "2026-10-29T05:53:08.954Z",
+      "updatedAt": "2026-10-29T05:53:08.954Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae5b",
+      "nomorResi": "EXP-GERRARD-010",
+      "pengirim": "Joko",
+      "penerima": "Gerrard",
+      "beratKg": 2.2,
+      "statusPengiriman": "dikirim",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 10",
+        "kota": "Palembang",
+        "provinsi": "Sumatera Selatan",
+        "kodePos": "30109"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae5c",
+          "waktu": "2026-10-29T05:53:08.949Z"
+        },
+        {
+          "status": "dikirim",
+          "lokasi": "Hub transit",
+          "keterangan": "Paket dalam perjalanan",
+          "_id": "6ae2df44332efa918487ae5d",
+          "waktu": "2026-10-29T05:53:08.949Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3d",
+      "createdAt": "2026-10-29T05:53:08.954Z",
+      "updatedAt": "2026-10-29T05:53:08.954Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae60",
+      "nomorResi": "EXP-GERRARD-012",
+      "pengirim": "Maya",
+      "penerima": "Lukman",
+      "beratKg": 1.9,
+      "statusPengiriman": "diterima",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 12",
+        "kota": "Surabaya",
+        "provinsi": "Jawa Timur",
+        "kodePos": "30111"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae61",
+          "waktu": "2026-10-29T05:53:08.950Z"
+        },
+        {
+          "status": "dikirim",
+          "lokasi": "Hub transit",
+          "keterangan": "Paket dalam perjalanan",
+          "_id": "6ae2df44332efa918487ae62",
+          "waktu": "2026-10-29T05:53:08.950Z"
+        },
+        {
+          "status": "diterima",
+          "lokasi": "Surabaya",
+          "keterangan": "Paket diterima penerima",
+          "_id": "6ae2df44332efa918487ae63",
+          "waktu": "2026-10-29T05:53:08.950Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3e",
+      "createdAt": "2026-10-29T05:53:08.954Z",
+      "updatedAt": "2026-10-29T05:53:08.954Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae55",
+      "nomorResi": "EXP-GERRARD-008",
+      "pengirim": "Mira",
+      "penerima": "Gita",
+      "beratKg": 5.1,
+      "statusPengiriman": "diproses",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 8",
+        "kota": "Jakarta",
+        "provinsi": "DKI Jakarta",
+        "kodePos": "30107"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae56",
+          "waktu": "2026-10-29T05:53:08.948Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3e",
+      "createdAt": "2026-10-29T05:53:08.954Z",
+      "updatedAt": "2026-10-29T05:53:08.954Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae4e",
+      "nomorResi": "EXP-GERRARD-006",
+      "pengirim": "Toni",
+      "penerima": "Eko",
+      "beratKg": 12.5,
+      "statusPengiriman": "dikirim",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 6",
+        "kota": "Surabaya",
+        "provinsi": "Jawa Timur",
+        "kodePos": "30105"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae4f",
+          "waktu": "2026-10-29T05:53:08.947Z"
+        },
+        {
+          "status": "dikirim",
+          "lokasi": "Hub transit",
+          "keterangan": "Paket dalam perjalanan",
+          "_id": "6ae2df44332efa918487ae50",
+          "waktu": "2026-10-29T05:53:08.947Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3e",
+      "createdAt": "2026-10-29T05:53:08.954Z",
+      "updatedAt": "2026-10-29T05:53:08.954Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae5e",
+      "nomorResi": "EXP-GERRARD-011",
+      "pengirim": "Lina",
+      "penerima": "Kiki",
+      "beratKg": 6.4,
+      "statusPengiriman": "diproses",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 11",
+        "kota": "Bandung",
+        "provinsi": "Jawa Barat",
+        "kodePos": "30110"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae5f",
+          "waktu": "2026-10-29T05:53:08.949Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3e",
+      "createdAt": "2026-10-29T05:53:08.954Z",
+      "updatedAt": "2026-10-29T05:53:08.954Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae4c",
+      "nomorResi": "EXP-GERRARD-005",
+      "pengirim": "Rina",
+      "penerima": "Dewi",
+      "beratKg": 0.8,
+      "statusPengiriman": "diproses",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 5",
+        "kota": "Bandung",
+        "provinsi": "Jawa Barat",
+        "kodePos": "30104"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae4d",
+          "waktu": "2026-10-29T05:53:08.946Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3e",
+      "createdAt": "2026-10-29T05:53:08.954Z",
+      "updatedAt": "2026-10-29T05:53:08.954Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae51",
+      "nomorResi": "EXP-GERRARD-007",
+      "pengirim": "Gerrard",
+      "penerima": "Fajar",
+      "beratKg": 3.3,
+      "statusPengiriman": "diterima",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 7",
+        "kota": "Palembang",
+        "provinsi": "Sumatera Selatan",
+        "kodePos": "30106"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae52",
+          "waktu": "2026-10-29T05:53:08.947Z"
+        },
+        {
+          "status": "dikirim",
+          "lokasi": "Hub transit",
+          "keterangan": "Paket dalam perjalanan",
+          "_id": "6ae2df44332efa918487ae53",
+          "waktu": "2026-10-29T05:53:08.947Z"
+        },
+        {
+          "status": "diterima",
+          "lokasi": "Palembang",
+          "keterangan": "Paket diterima penerima",
+          "_id": "6ae2df44332efa918487ae54",
+          "waktu": "2026-10-29T05:53:08.947Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3d",
+      "createdAt": "2026-10-29T05:53:08.954Z",
+      "updatedAt": "2026-10-29T05:53:08.954Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae42",
+      "nomorResi": "EXP-GERRARD-002",
+      "pengirim": "Dina",
+      "penerima": "Budi",
+      "beratKg": 4,
+      "statusPengiriman": "dikirim",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 2",
+        "kota": "Jakarta",
+        "provinsi": "DKI Jakarta",
+        "kodePos": "30101"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae43",
+          "waktu": "2026-10-29T05:53:08.944Z"
+        },
+        {
+          "status": "dikirim",
+          "lokasi": "Hub transit",
+          "keterangan": "Paket dalam perjalanan",
+          "_id": "6ae2df44332efa918487ae44",
+          "waktu": "2026-10-29T05:53:08.944Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3e",
+      "createdAt": "2026-10-29T05:53:08.953Z",
+      "updatedAt": "2026-10-29T05:53:08.953Z"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae49",
+      "nomorResi": "EXP-GERRARD-004",
+      "pengirim": "Gerrard",
+      "penerima": "Citra",
+      "beratKg": 7.8,
+      "statusPengiriman": "dikirim",
+      "alamatTujuan": {
+        "jalan": "Jl. Contoh No. 4",
+        "kota": "Medan",
+        "provinsi": "Sumatera Utara",
+        "kodePos": "30103"
+      },
+      "riwayatTracking": [
+        {
+          "status": "diproses",
+          "lokasi": "Gudang asal",
+          "keterangan": "Paket didaftarkan",
+          "_id": "6ae2df44332efa918487ae4a",
+          "waktu": "2026-10-29T05:53:08.946Z"
+        },
+        {
+          "status": "dikirim",
+          "lokasi": "Hub transit",
+          "keterangan": "Paket dalam perjalanan",
+          "_id": "6ae2df44332efa918487ae4b",
+          "waktu": "2026-10-29T05:53:08.946Z"
+        }
+      ],
+      "kurir": "6ae2df44332efa918487ae3f",
+      "createdAt": "2026-10-29T05:53:08.953Z",
+      "updatedAt": "2026-10-29T05:53:08.953Z"
+    }
+  ]
+}

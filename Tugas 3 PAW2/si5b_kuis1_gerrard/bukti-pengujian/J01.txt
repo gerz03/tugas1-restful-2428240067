@@ -1,0 +1,35 @@
+[J01] Projection: hanya nomorResi dan pengirim
+
+$ curl -X GET "http://localhost:3000/shipments?fields=nomorResi,pengirim&limit=3"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data shipment berhasil ditampilkan",
+  "meta": {
+    "page": 1,
+    "limit": 3,
+    "totalData": 13,
+    "totalPages": 5,
+    "hasNextPage": true,
+    "hasPrevPage": false
+  },
+  "data": [
+    {
+      "_id": "6ae2e130815c6987812ad871",
+      "nomorResi": "EXP-GERRARD-2428240067",
+      "pengirim": "Gerrard"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae51",
+      "nomorResi": "EXP-GERRARD-007",
+      "pengirim": "Gerrard"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae4e",
+      "nomorResi": "EXP-GERRARD-006",
+      "pengirim": "Toni"
+    }
+  ]
+}

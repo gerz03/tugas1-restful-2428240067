@@ -1,0 +1,42 @@
+[T02] Menampilkan satu shipment berdasarkan ID (kurir ter-populate)
+
+$ curl -X GET "http://localhost:3000/shipments/6ae2df44332efa918487ae40"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Shipment berdasarkan ID berhasil ditampilkan",
+  "data": {
+    "_id": "6ae2df44332efa918487ae40",
+    "nomorResi": "EXP-GERRARD-001",
+    "pengirim": "Gerrard",
+    "penerima": "Andi",
+    "beratKg": 2.5,
+    "statusPengiriman": "diproses",
+    "alamatTujuan": {
+      "jalan": "Jl. Contoh No. 1",
+      "kota": "Palembang",
+      "provinsi": "Sumatera Selatan",
+      "kodePos": "30100"
+    },
+    "riwayatTracking": [
+      {
+        "status": "diproses",
+        "lokasi": "Gudang asal",
+        "keterangan": "Paket didaftarkan",
+        "_id": "6ae2df44332efa918487ae41",
+        "waktu": "2026-10-29T05:53:08.939Z"
+      }
+    ],
+    "kurir": {
+      "_id": "6ae2df44332efa918487ae3d",
+      "nama": "Rudi Hartono",
+      "nomorTelepon": "081234567001",
+      "kendaraan": "motor",
+      "wilayah": "Palembang"
+    },
+    "createdAt": "2026-10-29T05:53:08.951Z",
+    "updatedAt": "2026-10-29T05:53:08.951Z"
+  }
+}

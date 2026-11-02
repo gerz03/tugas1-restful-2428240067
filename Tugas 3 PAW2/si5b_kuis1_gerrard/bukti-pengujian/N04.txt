@@ -1,0 +1,11 @@
+[N04] GET ID valid tetapi tidak ada di database
+
+$ curl -X GET "http://localhost:3000/shipments/64b7f0c2a1b2c3d4e5f60718"
+
+HTTP 404  (harapan 404)  =>  LULUS
+
+{
+  "status": "error",
+  "message": "Shipment tidak ditemukan",
+  "data": null
+}

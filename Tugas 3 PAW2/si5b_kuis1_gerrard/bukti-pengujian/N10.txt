@@ -1,0 +1,20 @@
+[N10] POST nomorResi duplikat
+
+$ curl -X POST "http://localhost:3000/shipments"
+    -H "x-api-key: secret123"
+    -H "Content-Type: application/json"
+    -d '{
+  "nomorResi": "EXP-GERRARD-001",
+  "pengirim": "Gerrard",
+  "penerima": "Andi",
+  "beratKg": 1,
+  "statusPengiriman": "diproses"
+}'
+
+HTTP 409  (harapan 409)  =>  LULUS
+
+{
+  "status": "error",
+  "message": "nomorResi sudah digunakan",
+  "data": null
+}

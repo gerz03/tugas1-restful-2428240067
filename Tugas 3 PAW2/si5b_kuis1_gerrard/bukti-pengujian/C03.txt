@@ -1,0 +1,28 @@
+[C03] Kurir: menambah kurir baru
+
+$ curl -X POST "http://localhost:3000/couriers"
+    -H "x-api-key: secret123"
+    -H "Content-Type: application/json"
+    -d '{
+  "nama": "Kurir Uji",
+  "nomorTelepon": "081200000000",
+  "kendaraan": "motor",
+  "wilayah": "Palembang"
+}'
+
+HTTP 201  (harapan 201)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Kurir baru berhasil ditambahkan",
+  "data": {
+    "nama": "Kurir Uji",
+    "nomorTelepon": "081200000000",
+    "kendaraan": "motor",
+    "wilayah": "Palembang",
+    "aktif": true,
+    "_id": "6ae2e130815c6987812ad876",
+    "createdAt": "2026-10-29T06:01:20.974Z",
+    "updatedAt": "2026-10-29T06:01:20.974Z"
+  }
+}

@@ -1,0 +1,44 @@
+[F01] Filter: statusPengiriman=dikirim
+
+$ curl -X GET "http://localhost:3000/shipments?statusPengiriman=dikirim&fields=nomorResi,pengirim,statusPengiriman"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data shipment berhasil ditampilkan",
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "totalData": 4,
+    "totalPages": 1,
+    "hasNextPage": false,
+    "hasPrevPage": false
+  },
+  "data": [
+    {
+      "_id": "6ae2df44332efa918487ae4e",
+      "nomorResi": "EXP-GERRARD-006",
+      "pengirim": "Toni",
+      "statusPengiriman": "dikirim"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae5b",
+      "nomorResi": "EXP-GERRARD-010",
+      "pengirim": "Joko",
+      "statusPengiriman": "dikirim"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae42",
+      "nomorResi": "EXP-GERRARD-002",
+      "pengirim": "Dina",
+      "statusPengiriman": "dikirim"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae49",
+      "nomorResi": "EXP-GERRARD-004",
+      "pengirim": "Gerrard",
+      "statusPengiriman": "dikirim"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+[S02] Sorting: banyak field (statusPengiriman naik, beratKg turun)
+
+$ curl -X GET "http://localhost:3000/shipments?sort=statusPengiriman,-beratKg&limit=6&fields=nomorResi,statusPengiriman,beratKg"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data shipment berhasil ditampilkan",
+  "meta": {
+    "page": 1,
+    "limit": 6,
+    "totalData": 13,
+    "totalPages": 3,
+    "hasNextPage": true,
+    "hasPrevPage": false
+  },
+  "data": [
+    {
+      "_id": "6ae2df44332efa918487ae4e",
+      "nomorResi": "EXP-GERRARD-006",
+      "beratKg": 12.5,
+      "statusPengiriman": "dikirim"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae49",
+      "nomorResi": "EXP-GERRARD-004",
+      "beratKg": 7.8,
+      "statusPengiriman": "dikirim"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae42",
+      "nomorResi": "EXP-GERRARD-002",
+      "beratKg": 4,
+      "statusPengiriman": "dikirim"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae5b",
+      "nomorResi": "EXP-GERRARD-010",
+      "beratKg": 2.2,
+      "statusPengiriman": "dikirim"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae5e",
+      "nomorResi": "EXP-GERRARD-011",
+      "beratKg": 6.4,
+      "statusPengiriman": "diproses"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae55",
+      "nomorResi": "EXP-GERRARD-008",
+      "beratKg": 5.1,
+      "statusPengiriman": "diproses"
+    }
+  ]
+}

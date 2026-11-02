@@ -1,0 +1,35 @@
+[C02] Kurir: projection nama dan kendaraan
+
+$ curl -X GET "http://localhost:3000/couriers?fields=nama,kendaraan"
+
+HTTP 200  (harapan 200)  =>  LULUS
+
+{
+  "status": "success",
+  "message": "Data kurir berhasil ditampilkan",
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "totalData": 3,
+    "totalPages": 1,
+    "hasNextPage": false,
+    "hasPrevPage": false
+  },
+  "data": [
+    {
+      "_id": "6ae2df44332efa918487ae3f",
+      "nama": "Bagas Pratama",
+      "kendaraan": "truk"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae3d",
+      "nama": "Rudi Hartono",
+      "kendaraan": "motor"
+    },
+    {
+      "_id": "6ae2df44332efa918487ae3e",
+      "nama": "Siti Aminah",
+      "kendaraan": "mobil"
+    }
+  ]
+}

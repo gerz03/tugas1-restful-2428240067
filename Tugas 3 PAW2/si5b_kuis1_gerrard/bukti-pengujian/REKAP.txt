@@ -1,0 +1,41 @@
+REKAPITULASI HASIL UJI
+
+ID   | Harapan | Hasil | Lulus | Skenario
+-----+---------+-------+-------+---------
+T01  | 200     | 200   | Ya    | Menampilkan semua shipment (default pagination)
+T02  | 200     | 200   | Ya    | Menampilkan satu shipment berdasarkan ID (kurir ter-populate)
+T03  | 201     | 201   | Ya    | Menambah shipment baru (embedding alamat + referencing kurir)
+T04  | 200     | 200   | Ya    | Mengubah shipment
+T05  | 201     | 201   | Ya    | Menambah riwayat tracking (subdokumen embedded)
+F01  | 200     | 200   | Ya    | Filter: statusPengiriman=dikirim
+F02  | 200     | 200   | Ya    | Filter gabungan: kota + rentang berat
+F03  | 200     | 200   | Ya    | Filter: pencarian bebas q=gerrard
+F04  | 200     | 200   | Ya    | Filter: berdasarkan kurir (referencing)
+P01  | 200     | 200   | Ya    | Pagination: halaman 1 (limit=5)
+P02  | 200     | 200   | Ya    | Pagination: halaman 2 (limit=5)
+P03  | 200     | 200   | Ya    | Pagination: halaman terakhir (page=3, limit=5)
+S01  | 200     | 200   | Ya    | Sorting: beratKg terbesar ke terkecil
+S02  | 200     | 200   | Ya    | Sorting: banyak field (statusPengiriman naik, beratKg turun)
+J01  | 200     | 200   | Ya    | Projection: hanya nomorResi dan pengirim
+J02  | 200     | 200   | Ya    | Populate referencing: kurir ikut ditampilkan di list
+J03  | 200     | 200   | Ya    | Kombinasi: filter + sort + pagination + projection + populate
+C01  | 200     | 200   | Ya    | Kurir: filter aktif=true + sorting nama + pagination
+C02  | 200     | 200   | Ya    | Kurir: projection nama dan kendaraan
+C03  | 201     | 201   | Ya    | Kurir: menambah kurir baru
+C04  | 204     | 204   | Ya    | Kurir: menghapus kurir yang tidak dipakai
+T06  | 204     | 204   | Ya    | Menghapus shipment
+N01  | 401     | 401   | Ya    | POST tanpa API key
+N02  | 400     | 400   | Ya    | POST body tidak lengkap
+N03  | 400     | 400   | Ya    | POST JSON rusak
+N04  | 404     | 404   | Ya    | GET ID valid tetapi tidak ada di database
+N05  | 400     | 400   | Ya    | GET dengan format ID tidak valid
+N06  | 400     | 400   | Ya    | Filter statusPengiriman tidak valid
+N07  | 400     | 400   | Ya    | Sorting dengan field tidak valid
+N08  | 400     | 400   | Ya    | Pagination dengan limit di luar batas
+N09  | 400     | 400   | Ya    | Projection dengan field tidak valid
+N10  | 409     | 409   | Ya    | POST nomorResi duplikat
+N11  | 400     | 400   | Ya    | POST dengan kurir yang tidak ada
+N12  | 409     | 409   | Ya    | Hapus kurir yang masih dipakai shipment
+N13  | 400     | 400   | Ya    | Tracking dengan status tidak valid
+
+Total: 35/35 skenario lulus

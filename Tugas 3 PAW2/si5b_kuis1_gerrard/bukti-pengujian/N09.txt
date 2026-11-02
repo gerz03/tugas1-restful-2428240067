@@ -1,0 +1,11 @@
+[N09] Projection dengan field tidak valid
+
+$ curl -X GET "http://localhost:3000/shipments?fields=nomorResi,rahasia"
+
+HTTP 400  (harapan 400)  =>  LULUS
+
+{
+  "status": "error",
+  "message": "Field projection 'rahasia' tidak valid. Gunakan salah satu dari: nomorResi, pengirim, penerima, beratKg, statusPengiriman, alamatTujuan, riwayatTracking, kurir, createdAt, updatedAt",
+  "data": null
+}

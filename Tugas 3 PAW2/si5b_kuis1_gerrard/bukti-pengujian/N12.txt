@@ -1,0 +1,12 @@
+[N12] Hapus kurir yang masih dipakai shipment
+
+$ curl -X DELETE "http://localhost:3000/couriers/6ae2df44332efa918487ae3f"
+    -H "x-api-key: secret123"
+
+HTTP 409  (harapan 409)  =>  LULUS
+
+{
+  "status": "error",
+  "message": "Kurir tidak bisa dihapus karena masih dipakai oleh 2 shipment",
+  "data": null
+}
